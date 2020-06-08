@@ -1,0 +1,19 @@
+<div class="row">   
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar Artista">
+    </div>
+</div>
+
+
+<!-- <div class="card-columns">
+    <div *ngFor="let artista of artistas" class="card border-success mb-3">
+        <img [src]="artista.images | noimage" class="card-img-top" alt="...">
+        <div class="card-body text-success">
+            <h5 class="card-title">{{artista.name}}</h5>
+            
+        </div>
+    </div>
+</div> -->
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+
+<app-tarjetas [items]="artistas"></app-tarjetas>
